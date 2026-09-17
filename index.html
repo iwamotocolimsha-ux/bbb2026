@@ -379,6 +379,17 @@
       .footer{padding-bottom:120px}
       .footer-bottom{flex-direction:column;gap:10px}
     }
+    /* 指定見出し3箇所のみタイポグラフィ調整 */
+    .hero-title{font-size:clamp(3rem,6.6vw,7rem)!important;line-height:.94!important}
+    .message-main-title{font-size:clamp(2.15rem,4.35vw,4.65rem);line-height:1.08}
+    .venue-main-title .accent{display:block;white-space:nowrap;font-size:clamp(1.15rem,4.25vw,4.55rem);letter-spacing:-.06em}
+
+    @media (max-width:600px){
+      .hero-title{font-size:clamp(2.85rem,14.8vw,4.55rem)!important;line-height:.96!important}
+      .message-main-title{font-size:clamp(2rem,10.5vw,3.05rem);line-height:1.1}
+      .venue-main-title .accent{font-size:clamp(1.08rem,5.05vw,1.8rem);letter-spacing:-.07em}
+    }
+
     @media (prefers-reduced-motion:reduce){
       *,*::before,*::after{scroll-behavior:auto !important;transition-duration:.001ms !important;animation-duration:.001ms !important;animation-iteration-count:1 !important}
       .reveal{opacity:1;transform:none}
@@ -438,7 +449,7 @@
       <div class="hero-inner">
         <div class="hero-content">
           <div class="hero-badge"><span>出場選手募集</span>第4回 Beat Boxing Battle</div>
-          <h1><span class="small-line">NEXT CHALLENGER IS YOU.</span>次にリングへ<br>上がるのは、<span class="red">あなた。</span></h1>
+          <h1 class="hero-title"><span class="small-line">NEXT CHALLENGER IS YOU.</span>次にリングへ<br>上がるのは、<br><span class="red">あなた。</span></h1>
           <p class="hero-copy">練習してきた力を、リングで試す。<br><strong>2026年11月22日、いしかわ総合スポーツセンター。</strong><br>Beat Boxing Battleが、あなたの挑戦を待っています。</p>
           <div class="hero-actions">
             <a class="button button-primary js-entry-link" href="#entry">Googleフォームで出場申込
@@ -490,7 +501,7 @@
         <div class="message-grid">
           <div class="message-sticky reveal">
             <p class="eyebrow">Why You Fight</p>
-            <h2 class="section-title">練習してきた。<br>その力を、<br><span class="accent">リングで試そう。</span></h2>
+            <h2 class="section-title message-main-title">練習してきた。<br>その力を、<br><span class="accent">リングで試そう。</span></h2>
             <p class="section-lead">勝つためだけじゃない。経験を積むため、自分を試すため、一歩前へ進むため。Beat Boxing Battleは、挑戦する選手がリングへ立つきっかけをつくります。</p>
           </div>
           <div class="message-copy">
@@ -604,7 +615,7 @@
     <section class="section section-soft" id="venue">
       <div class="container">
         <p class="eyebrow reveal">Venue</p>
-        <h2 class="section-title reveal">舞台は、<br><span class="accent">いしかわ総合スポーツセンター。</span></h2>
+        <h2 class="section-title reveal venue-main-title">舞台は、<br><span class="accent">いしかわ総合スポーツセンター。</span></h2>
         <div class="venue-grid">
           <div class="venue-info reveal">
             <h3>いしかわ総合スポーツセンター</h3>
@@ -674,7 +685,7 @@
                   <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l3 3v15H7V3Z" stroke="currentColor" stroke-width="1.8"/><path d="M14 3v4h4M10 11h4M10 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
                 </div>
                 <h3>出場申込はGoogleフォームで受付</h3>
-                <p></p>
+                <p>公開用GoogleフォームURLを設定すると、このエリアに申込フォームが直接表示されます。</p>
                 <a class="button button-primary" id="formExternalLink" href="#entry" hidden>Googleフォームを開く
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
